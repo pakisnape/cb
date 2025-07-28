@@ -1,0 +1,15 @@
+{
+  "name": "@connectbase/pattern-lib",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^15.0.0",
+    "@angular/core": "^15.0.0",
+    "bootstrap": "^5.0.1"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "publishConfig": {
+    "registry": "https://monitor.connected2fiber.com/nexus/repository/c2f-npm-releases/"
+  }
+}

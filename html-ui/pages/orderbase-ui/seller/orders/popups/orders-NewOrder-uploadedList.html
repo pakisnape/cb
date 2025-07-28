@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="../../../../../../projects/pattern-lib/static/assets/images/favicon.png"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../../../../projects/pattern-lib/static/assets/css/main.css"
+    />
+    <title>Connect Base - Transform Network Buying &amp; Selling</title>
+  </head>
+
+  <body>
+    <div class="strip"></div>
+    <!--SIDEBAR STARTS-->
+    <nav class="sidebar">
+      <div class="top">
+        <a href="#" class="logo">
+          <img
+            src="../../../../../../projects/pattern-lib/static/assets/icons/nav-bar/logo.svg"
+            alt="Logo"
+          />
+        </a>
+        <ul>
+          <li>
+            <a>
+              <img
+                src="../../../../../../projects/pattern-lib/static/assets/icons/nav-bar/home.svg"
+                alt="Home"
+              />
+              <span>Home</span>
+            </a>
+          </li>
+          <li class="active">
+            <a>
+              <img
+                src="../../../../../../projects/pattern-lib/static/assets/icons/nav-bar/orders.svg"
+                alt="Orders"
+              />
+              <span>Orders</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="bottom">
+        <ul>
+          <li>
+            <a>
+              <img
+                src="../../../../../../projects/pattern-lib/static/assets/icons/nav-bar/settings.svg"
+                alt="Settings"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--SIDEBAR ENDS-->
+    <!--MAIN WRAPPER-->
+    <section class="main-wrapper order-base">
+      <!--PAGE HEADER-->
+      <header class="pageHeader">
+        <h1>Orders</h1>
+        <!-- PROFILE BAR STARTS-->
+        <div class="profile-bar">
+          <button class="notifications">
+            <img
+              src="../../../../../../projects/pattern-lib/static/assets/icons/notifications.svg"
+              alt="Notifications"
+            />
+          </button>
+          <button class="profile">
+            <img
+              src="../../../../../../projects/pattern-lib/static/assets/images/profile.png"
+              alt="Profile"
+            />
+          </button>
+        </div>
+        <!--PROFILE BAR ENDS-->
+      </header>
+      <!--PAGE HEADER ENDS-->
+      <!--MAIN CONTENT-->
+      <section class="main-content">
+        <section class="d-flex justify-content-between mt8 mb10 filter-box">
+          <!-- FILTERS STARTS-->
+          <div class="filter">
+            <div class="search">
+              <input
+                type="text"
+                class="formInputText small rounded"
+                placeholder="Search"
+              />
+            </div>
+            <div class="filters">
+              <div class="customdropdown rounded">
+                <div class="dropdown">Stages</div>
+                <ul class="dropdown-list">
+                  <li>Item 1</li>
+                </ul>
+              </div>
+              <div class="customdropdown rounded">
+                <div class="dropdown">Owners</div>
+                <ul class="dropdown-list">
+                  <li>Item 1</li>
+                </ul>
+              </div>
+              <div class="customdropdown rounded">
+                <div class="dropdown">Accounts</div>
+                <ul class="dropdown-list">
+                  <li>Item 1</li>
+                </ul>
+              </div>
+              <div class="customdropdown rounded">
+                <div class="dropdown">Products</div>
+                <ul class="dropdown-list">
+                  <li>Item 1</li>
+                </ul>
+              </div>
+              <button class="secondary-btn medium">All Filters</button>
+            </div>
+          </div>
+          <!--FILTERS ENDS-->
+          <!--ICON TAB STARTS-->
+          <div class="icon-tab">
+            <div class="download">
+              <button>
+                <img
+                  src="../../../../../../projects/pattern-lib/static/assets/icons/download.svg"
+                  alt="Download"
+                />
+              </button>
+            </div>
+            <button class="primary-btn medium">New Order</button>
+            <div class="iconList">
+              <button class="active">
+                <img
+                  src="../../../../../../projects/pattern-lib/static/assets/icons/table.svg"
+                  alt="table"
+                />
+              </button>
+              <button>
+                <img
+                  src="../../../../../../projects/pattern-lib/static/assets/icons/grid.svg"
+                  alt="grid"
+                />
+              </button>
+            </div>
+          </div>
+          <!--ICON TAB ENDS-->
+        </section>
+        <hr />
+        <section class="table-content expandable-content">
+          <div class="left-box">
+            <button class="settings-btn">
+              <img
+                src="../../../../../../projects/pattern-lib/static/assets/icons/nav-bar/settings.svg"
+                alt="Settings"
+              />
+            </button>
+            <!--TABLE STARTS-->
+            <table class="table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th class="sort">
+                    Order
+                    <img
+                      src="../../../../../../projects/pattern-lib/static/assets/icons/sort.svg"
+                      alt="Sort"
+                    />
+                  </th>
+                  <th>Account</th>
+                  <th>End Customer</th>
+                  <th>Stage</th>
+                  <th>End Date</th>
+                  <th>Progress</th>
+                  <th>Category</th>
+                  <th>Product</th>
+                  <th>Speed</th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <!--TABLE ROW STARTS-->
+                <tr>
+                  <td>
+                    <span class="status pending"></span>
+                  </td>
+                  <td data-label="Order">
+                    <span class="text-medium">92388473</span>
+                  </td>
+                  <td data-label="Account">AT&amp;T</td>
+                  <td data-label="End Customer">Starbucks</td>
+                  <td data-label="Stage">
+                    <label class="badge ordered">Ordered</label>
+                  </td>
+                  <td data-label="End Date">
+                    Jan 2, 2023
+                    <div><small class="text-small">Requested</small></div>
+                  </td>
+                  <td data-label="Progress">
+                    <div>
+                      <img
+                        src="../../../../../../projects/pattern-lib/static/assets/icons/flag.svg"
+                        alt="Flag"
+                      />
+                      20%
+                    </div>
+                    <div class="progress-bar-lined">
+                      <div class="progress purple" style="width: 20%"></div>
+                    </div>
+                  </td>
+                  <td data-label="Category">Bandwidth</td>
+                  <td data-label="Product">
+                    <div>
+                      <img
+                        src="../../../../../../projects/pattern-lib/static/assets/icons/products/epl.svg"
+                        alt="EPL"
+                      />
+                      EPL
+                    </div>
+                  </td>
+                  <td data-label="Speed" class="icon-td">
+                    <div>
+                      <img
+                        src="../../../../../../projects/pattern-lib/static/assets/icons/speed/1g.svg"
+                        alt="1g"
+                      />
+                      1 G
+                    </div>
+                  </td>
+                  <td data-label="Assigned" class="icon-td">
+                    <div class="avatar purple"><span>jb</span></div>
+                  </td>
+                  <td class="actions">
+                    <button class="icon-btn">
+                      <img
+                        src="../../../../../../projects/pattern-lib/static/assets/icons/actions/send.svg"
+                        alt="send"
+                      />
+                    </button>
+                    <button class="icon-btn">
+                      <img
+                        src="../../../../../../projects/pattern-lib/static/assets/icons/actions/more.svg"
+                        alt="more"
+                      />
+                    </button>
+                  </td>
+                </tr>
+                <!--TABLE ROW ENDS-->
+                <!--TABLE ROW STARTS-->
+                <tr>
+                  <td>
+                    <span class="status pending"></span>
+                  </td>
+                  <td data-label="Order">
+                    <span class="text-medium">92388473</span>
+                  </td>
+                  <td data-label="Account">AT&amp;T</td>
+                  <td data-label="End Customer">Starbucks</td>
+                  <td data-label="Stage">
+                    <label class="badge confirmed">Confirmed</label>
+                  </td>
+                  <td data-label="End Date">
+                    Jan 2, 2023
+                    <div><small class="text-small">Requested</small></div>
+                  </td>
+                  <td data-label="Progress">
+                    <div>30%</div>
+                    <div class="progress-bar-lined">
+                      <div
+                        class="progress lightpurple"
+                        style="width: 30%"
+                      ></div>
+                    </div>
+                  </td>
+                  <td data-label="Category">Bandwidth</td>
+                  <td data-label="Product">
+                    <div>
+                      <img
+                        src="../../../../../../projects/pattern-lib/static/assets/icons/products/epl.svg"
+                        alt="EPL"
+                      />
+                      EPL
+                    </div>
+                  </td>
+                  <td data-label="Speed" class="icon-td">
+                    <div>
+                      <img
+                        src="../../../../../../projects/pattern-lib/static/assets/icons/speed/1g.svg"
+                        alt="1g"
+                      />
+                      1 G
+                    </div>
+                  </td>
+                  <td data-label="Assigned" class="icon-td">
+                    <div class="avatar purple"><span>jb</span></div>
+                  </td>
+                  <td class="actions">
+                    <button class="icon-btn">
+                      <img
+                        src="../../../../../../projects/pattern-lib/static/assets/icons/actions/send.svg"
+                        alt="send"
+                      />
+                    </button>
+                    <button class="icon-btn">
+                      <img
+                        src="../../../../../../projects/pattern-lib/static/assets/icons/actions/more.svg"
+                        alt="more"
+                      />
+                    </button>
+                  </td>
+                </tr>
+                <!--TABLE ROW ENDS-->
+                <!--TABLE ROW STARTS-->
+                <tr>
+                  <td>
+                    <span class="status pending"></span>
+                  </td>
+                  <td data-label="Order">
+                    <span class="text-medium">92388473</span>
+                  </td>
+                  <td data-label="Account">AT&amp;T</td>
+                  <td data-label="End Customer">Starbucks</td>
+                  <td data-label="Stage">
+                    <label class="badge rejected0">Rejected</label>
+                  </td>
+                  <td data-label="End Date">
+                    Jan 2, 2023
+                    <div><small class="text-small">Requested</small></div>
+                  </td>
+                  <td data-label="Progress">
+                    <div>50%</div>
+                    <div class="progress-bar-lined">
+                      <div class="progress red" style="width: 50%"></div>
+                    </div>
+                  </td>
+                  <td data-label="Category">Bandwidth</td>
+                  <td data-label="Product">
+                    <div>
+                      <img
+                        src="../../../../../../projects/pattern-lib/static/assets/icons/products/epl.svg"
+                        alt="EPL"
+                      />
+                      EPL
+                    </div>
+                  </td>
+                  <td data-label="Speed" class="icon-td">
+                    <div>
+                      <img
+                        src="../../../../../../projects/pattern-lib/static/assets/icons/speed/1g.svg"
+                        alt="1g"
+                      />
+                      1 G
+                    </div>
+                  </td>
+                  <td data-label="Assigned" class="icon-td">
+                    <div class="avatar purple"><span>jb</span></div>
+                  </td>
+                  <td class="actions">
+                    <button class="icon-btn">
+                      <img
+                        src="../../../../../../projects/pattern-lib/static/assets/icons/actions/send.svg"
+                        alt="send"
+                      />
+                    </button>
+                    <button class="icon-btn">
+                      <img
+                        src="../../../../../../projects/pattern-lib/static/assets/icons/actions/more.svg"
+                        alt="more"
+                      />
+                    </button>
+                  </td>
+                </tr>
+                <!--TABLE ROW ENDS-->
+                <!--TABLE ROW STARTS-->
+                <tr>
+                  <td>
+                    <span class="status pending"></span>
+                  </td>
+                  <td data-label="Order">
+                    <span class="text-medium">92388473</span>
+                  </td>
+                  <td data-label="Account">AT&amp;T</td>
+                  <td data-label="End Customer">Starbucks</td>
+                  <td data-label="Stage">
+                    <label class="badge sent0">Sent</label>
+                  </td>
+                  <td data-label="End Date">
+                    Jan 2, 2023
+                    <div><small class="text-small">Requested</small></div>
+                  </td>
+                  <td data-label="Progress">
+                    <div>
+                      <img
+                        src="../../../../../../projects/pattern-lib/static/assets/icons/flag.svg"
+                        alt="Flag"
+                      />
+                      2%
+                    </div>
+                    <div class="progress-bar-lined">
+                      <div class="progress grey" style="width: 2%"></div>
+                    </div>
+                  </td>
+                  <td data-label="Category">Bandwidth</td>
+                  <td data-label="Product">
+                    <div>
+                      <img
+                        src="../../../../../../projects/pattern-lib/static/assets/icons/products/epl.svg"
+                        alt="EPL"
+                      />
+                      EPL
+                    </div>
+                  </td>
+                  <td data-label="Speed" class="icon-td">
+                    <div>
+                      <img
+                        src="../../../../../../projects/pattern-lib/static/assets/icons/speed/1g.svg"
+                        alt="1g"
+                      />
+                      1 G
+                    </div>
+                  </td>
+                  <td data-label="Assigned" class="icon-td">
+                    <div class="avatar purple"><span>jb</span></div>
+                  </td>
+                  <td class="actions">
+                    <button class="icon-btn">
+                      <img
+                        src="../../../../../../projects/pattern-lib/static/assets/icons/actions/send.svg"
+                        alt="send"
+                      />
+                    </button>
+                    <button class="icon-btn">
+                      <img
+                        src="../../../../../../projects/pattern-lib/static/assets/icons/actions/more.svg"
+                        alt="more"
+                      />
+                    </button>
+                  </td>
+                </tr>
+                <!--TABLE ROW ENDS-->
+                <!--TABLE ROW STARTS-->
+                <tr>
+                  <td>
+                    <span class="status pending"></span>
+                  </td>
+                  <td data-label="Order">
+                    <span class="text-medium">92388473</span>
+                  </td>
+                  <td data-label="Account">AT&amp;T</td>
+                  <td data-label="End Customer">Starbucks</td>
+                  <td data-label="Stage">
+                    <label class="badge delivered">Delivered</label>
+                  </td>
+                  <td data-label="End Date">
+                    Jan 2, 2023
+                    <div><small class="text-small">Requested</small></div>
+                  </td>
+                  <td data-label="Progress">
+                    <div>92%</div>
+                    <div class="progress-bar-lined">
+                      <div class="progress green" style="width: 92%"></div>
+                    </div>
+                  </td>
+                  <td data-label="Category">Bandwidth</td>
+                  <td data-label="Product">
+                    <div>
+                      <img
+                        src="../../../../../../projects/pattern-lib/static/assets/icons/products/epl.svg"
+                        alt="EPL"
+                      />
+                      EPL
+                    </div>
+                  </td>
+                  <td data-label="Speed" class="icon-td">
+                    <div>
+                      <img
+                        src="../../../../../../projects/pattern-lib/static/assets/icons/speed/1g.svg"
+                        alt="1g"
+                      />
+                      1 G
+                    </div>
+                  </td>
+                  <td data-label="Assigned" class="icon-td">
+                    <div class="avatar purple"><span>jb</span></div>
+                  </td>
+                  <td class="actions">
+                    <button class="icon-btn">
+                      <img
+                        src="../../../../../../projects/pattern-lib/static/assets/icons/actions/send.svg"
+                        alt="send"
+                      />
+                    </button>
+                    <button class="icon-btn">
+                      <img
+                        src="../../../../../../projects/pattern-lib/static/assets/icons/actions/more.svg"
+                        alt="more"
+                      />
+                    </button>
+                  </td>
+                </tr>
+                <!--TABLE ROW ENDS-->
+                <!--TABLE ROW STARTS-->
+                <tr>
+                  <td>
+                    <span class="status pending"></span>
+                  </td>
+                  <td data-label="Order">
+                    <span class="text-medium">92388473</span>
+                  </td>
+                  <td data-label="Account">AT&amp;T</td>
+                  <td data-label="End Customer">Starbucks</td>
+                  <td data-label="Stage">
+                    <label class="badge completed">Completed</label>
+                  </td>
+                  <td data-label="End Date">
+                    Jan 2, 2023
+                    <div><small class="text-small">Requested</small></div>
+                  </td>
+                  <td data-label="Progress">
+                    <div>92%</div>
+                    <div class="progress-bar-lined">
+                      <div class="progress lightgreen" style="width: 92%"></div>
+                    </div>
+                  </td>
+                  <td data-label="Category">Bandwidth</td>
+                  <td data-label="Product">
+                    <div>
+                      <img
+                        src="../../../../../../projects/pattern-lib/static/assets/icons/products/epl.svg"
+                        alt="EPL"
+                      />
+                      EPL
+                    </div>
+                  </td>
+                  <td data-label="Speed" class="icon-td">
+                    <div>
+                      <img
+                        src="../../../../../../projects/pattern-lib/static/assets/icons/speed/1g.svg"
+                        alt="1g"
+                      />
+                      1 G
+                    </div>
+                  </td>
+                  <td data-label="Assigned" class="icon-td">
+                    <div class="avatar purple"><span>jb</span></div>
+                  </td>
+                  <td class="actions">
+                    <button class="icon-btn">
+                      <img
+                        src="../../../../../../projects/pattern-lib/static/assets/icons/actions/send.svg"
+                        alt="send"
+                      />
+                    </button>
+                    <button class="icon-btn">
+                      <img
+                        src="../../../../../../projects/pattern-lib/static/assets/icons/actions/more.svg"
+                        alt="more"
+                      />
+                    </button>
+                  </td>
+                </tr>
+                <!--TABLE ROW ENDS-->
+                <!--TABLE ROW STARTS-->
+                <tr>
+                  <td>
+                    <span class="status pending"></span>
+                  </td>
+                  <td data-label="Order">
+                    <span class="text-medium">92388473</span>
+                  </td>
+                  <td data-label="Account">AT&amp;T</td>
+                  <td data-label="End Customer">Starbucks</td>
+                  <td data-label="Stage">
+                    <label class="badge onhold">On Hold</label>
+                  </td>
+                  <td data-label="End Date">
+                    Jan 2, 2023
+                    <div><small class="text-small">Requested</small></div>
+                  </td>
+                  <td data-label="Progress">
+                    <div>25%</div>
+                    <div class="progress-bar-lined">
+                      <div class="progress yellow" style="width: 92%"></div>
+                    </div>
+                  </td>
+                  <td data-label="Category">Bandwidth</td>
+                  <td data-label="Product">
+                    <div>
+                      <img
+                        src="../../../../../../projects/pattern-lib/static/assets/icons/products/epl.svg"
+                        alt="EPL"
+                      />
+                      EPL
+                    </div>
+                  </td>
+                  <td data-label="Speed" class="icon-td">
+                    <div>
+                      <img
+                        src="../../../../../../projects/pattern-lib/static/assets/icons/speed/1g.svg"
+                        alt="1g"
+                      />
+                      1 G
+                    </div>
+                  </td>
+                  <td data-label="Assigned" class="icon-td">
+                    <div class="avatar purple"><span>jb</span></div>
+                  </td>
+                  <td class="actions">
+                    <button class="icon-btn">
+                      <img
+                        src="../../../../../../projects/pattern-lib/static/assets/icons/actions/send.svg"
+                        alt="send"
+                      />
+                    </button>
+                    <button class="icon-btn">
+                      <img
+                        src="../../../../../../projects/pattern-lib/static/assets/icons/actions/more.svg"
+                        alt="more"
+                      />
+                    </button>
+                  </td>
+                </tr>
+                <!--TABLE ROW ENDS-->
+              </tbody>
+            </table>
+            <!--TABLE ENDS-->
+          </div>
+          <div class="right-box" style="display: none"></div>
+        </section>
+      </section>
+      <!--MAIN CONTENT ENDS-->
+    </section>
+    <!--MAIN WRAPPER ENDS-->
+    <!--MODAL-->
+    <div class="common-modal large new-orders">
+      <div class="modal-content-holder">
+        <div class="modal-header d-flex justify-content-between w-100">
+          <span>New Orders</span>
+          <a href="#" class="close-icon">
+            <img
+              src="../../../../../../projects/pattern-lib/static/assets/icons/close-white.svg"
+              alt="icon-close"
+            />
+          </a>
+        </div>
+        <div class="modal-content">
+          <section
+            class="table-content expandable-content"
+            id="expandable-content"
+          >
+            <div class="left-box">
+              <!--TABLE STARTS-->
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th colspan="14" class="colspaned">
+                      <table class="nested-table">
+                        <colgroup>
+                          <col class="bullets-col" />
+
+                          <col class="sort sort order-col" />
+                          <col class="customer-col" />
+                          <col class="category-col" />
+                          <col class="product-col" />
+                          <col class="speed-col" />
+                          <col class="actions-col" />
+                        </colgroup>
+                        <tr>
+                          <th class="bullets-col"></th>
+
+                          <th class="sort sort order-col">
+                            Order
+                            <img
+                              src="../../../../../../projects/pattern-lib/static/assets/icons/sort.svg"
+                              alt="Sort"
+                            />
+                          </th>
+                          <th class="customer-col">Site Company</th>
+                          <th class="category-col">Category</th>
+                          <th class="product-col">Product</th>
+                          <th class="speed-col">Speed</th>
+                          <th class="actions-col">
+                            <div class="action-wrap"></div>
+                          </th>
+                        </tr>
+                      </table>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!--TABLE ROW STARTS-->
+                  <tr class="expandable success">
+                    <td colspan="14" class="colspaned">
+                      <table class="nested-table">
+                        <colgroup>
+                          <col class="bullets-col" />
+
+                          <col class="sort sort order-col" />
+                          <col class="customer-col" />
+                          <col class="category-col" />
+                          <col class="product-col" />
+                          <col class="speed-col" />
+                          <col class="actions-col" />
+                        </colgroup>
+                        <tr>
+                          <td class="bullets-col">
+                            <span class="status ordered"></span>
+                          </td>
+
+                          <td data-label="Order" class="order-col">
+                            <span class="text-medium">92388473</span>
+                          </td>
+
+                          <td data-label="End Customer" class="customer-col">
+                            Starbucks
+                          </td>
+
+                          <td data-label="Category" class="category-col">
+                            Bandwidth
+                          </td>
+                          <td data-label="Product" class="icon-td product-col">
+                            <div>
+                              <img
+                                src="../../../../../../projects/pattern-lib/static/assets/icons/products/epl.svg"
+                                alt="EPL"
+                              />
+                              EPL
+                            </div>
+                          </td>
+                          <td data-label="Speed" class="icon-td speed-col">
+                            <div>
+                              <img
+                                src="../../../../../../projects/pattern-lib/static/assets/icons/speed/1g.svg"
+                                alt="1g"
+                              />
+                              1 G
+                            </div>
+                          </td>
+
+                          <td class="actions actions-col">
+                            <div class="action-wrap">
+                              <button class="icon-btn">
+                                <img
+                                  src="../../../../../../projects/pattern-lib/static/assets/icons/actions/send.svg"
+                                  alt="send"
+                                />
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <!--TABLE ROW ENDS-->
+                  <!--TABLE ROW STARTS-->
+                  <tr class="expandable success">
+                    <td colspan="14" class="colspaned">
+                      <table class="nested-table">
+                        <colgroup>
+                          <col class="bullets-col" />
+
+                          <col class="sort sort order-col" />
+                          <col class="customer-col" />
+                          <col class="category-col" />
+                          <col class="product-col" />
+                          <col class="speed-col" />
+                          <col class="actions-col" />
+                        </colgroup>
+                        <tr>
+                          <td class="bullets-col">
+                            <span class="status"></span>
+                          </td>
+
+                          <td data-label="Order" class="order-col">
+                            <span class="text-medium">92388473</span>
+                          </td>
+
+                          <td data-label="End Customer" class="customer-col">
+                            Starbucks
+                          </td>
+
+                          <td data-label="Category" class="category-col">
+                            Bandwidth
+                          </td>
+                          <td data-label="Product" class="icon-td product-col">
+                            <div>
+                              <img
+                                src="../../../../../../projects/pattern-lib/static/assets/icons/products/epl.svg"
+                                alt="EPL"
+                              />
+                              EPL
+                            </div>
+                          </td>
+                          <td data-label="Speed" class="icon-td speed-col">
+                            <div>
+                              <img
+                                src="../../../../../../projects/pattern-lib/static/assets/icons/speed/1g.svg"
+                                alt="1g"
+                              />
+                              1 G
+                            </div>
+                          </td>
+
+                          <td class="actions actions-col">
+                            <div class="action-wrap">
+                              <button class="icon-btn">
+                                <img
+                                  src="../../../../../../projects/pattern-lib/static/assets/icons/actions/send.svg"
+                                  alt="send"
+                                />
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <!--TABLE ROW ENDS-->
+                  <!--TABLE ROW STARTS-->
+                  <tr class="expandable error">
+                    <td colspan="14" class="colspaned">
+                      <table class="nested-table">
+                        <colgroup>
+                          <col class="bullets-col" />
+
+                          <col class="sort sort order-col" />
+                          <col class="customer-col" />
+                          <col class="category-col" />
+                          <col class="product-col" />
+                          <col class="speed-col" />
+                          <col class="actions-col" />
+                        </colgroup>
+                        <tr>
+                          <td class="bullets-col">
+                            <span class="status"></span>
+                          </td>
+
+                          <td data-label="Order" class="order-col">
+                            <span class="text-medium">92388473</span>
+                          </td>
+
+                          <td data-label="End Customer" class="customer-col">
+                            Starbucks
+                          </td>
+
+                          <td data-label="Category" class="category-col">
+                            Bandwidth
+                          </td>
+                          <td data-label="Product" class="icon-td product-col">
+                            <div>
+                              <img
+                                src="../../../../../../projects/pattern-lib/static/assets/icons/products/epl.svg"
+                                alt="EPL"
+                              />
+                              EPL
+                            </div>
+                          </td>
+                          <td data-label="Speed" class="icon-td speed-col">
+                            <div>
+                              <img
+                                src="../../../../../../projects/pattern-lib/static/assets/icons/speed/1g.svg"
+                                alt="1g"
+                              />
+                              1 G
+                            </div>
+                          </td>
+
+                          <td class="actions actions-col">
+                            <div class="action-wrap">
+                              <button class="icon-btn">
+                                <img
+                                  src="../../../../../../projects/pattern-lib/static/assets/icons/actions/send.svg"
+                                  alt="send"
+                                />
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <!--TABLE ROW ENDS-->
+                </tbody>
+              </table>
+              <!--TABLE ENDS-->
+            </div>
+          </section>
+        </div>
+        <div class="modal-footer d-flex justify-content-end">
+          <button class="btn-outline-danger large px5 mr4">Discard</button>
+          <button class="btn-outline-theme large px5 mr4">Validate</button>
+
+          <button class="primary-btn large px5" disabled>Submit</button>
+        </div>
+      </div>
+    </div>
+    <div class="overlay"></div>
+    <!--MODAL ENDS-->
+  </body>
+</html>

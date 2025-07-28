@@ -1,24 +1,45 @@
-# PatternLib
+# Connectbase Design System
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
+> _"A Design System is an artefact of the culture and collaboration in your company" -- Dom_
 
-## Code scaffolding
+## What is design system?
 
-Run `ng generate component component-name --project pattern-lib` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project pattern-lib`.
-> Note: Don't forget to add `--project pattern-lib` or else it will be added to the default project in your `angular.json` file. 
 
-## Build
+The composition of components, patterns and processes that is consumable, documented, published to be able to be reusable and scalable in a business domain
 
-Run `ng build pattern-lib` to build the project. The build artifacts will be stored in the `dist/` directory.
+# Getting Started
 
-## Publishing
+## Dependencies
 
-After building your library with `ng build pattern-lib`, go to the dist folder `cd dist/pattern-lib` and run `npm publish`.
 
-## Running unit tests
+##### Node/NPM
 
-Run `ng test pattern-lib` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Install latest Node and NPM following the [instructions](https://nodejs.org/en/download/). Make sure you have Node version ≥ 18.12.0 and NPM version ≥ 9.0.
 
-## Further help
+- `brew install node` for Mac.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Installing
+
+
+- Make sure you have the `Angular CLI version 15` installed globally.
+- `fork` this repository.
+- `clone` your fork to your local environment.
+- `npm install` to install required dependencies.
+
+## Development
+
+
+##### Steps need to follow for branching
+
+- New branch need to taken from `development` branch.
+- Banch name should be like ex: `Bug/CW-<task-id>` or `Feature/CW-<task-id>`.
+- Commit message should be like `CW-<task-id>:<one line description of the commit>`.
+- Need to create `Pull Request` against `development` branch by following format.
+
+##### Steps need to follow for Pull Request
+
+- Title should be like ex: `CW-<task-id>:<task title>`.
+- One line `description` of the task.
+- `Bulleted points` of code specific changes (1 or more bulleted points).
+- `Task Related to`: If the task is related to any parent task mention that task ID (CW-<task-id>).
+

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="../../projects/pattern-lib/static/assets/css/main.css"
+    />
+    <title>Connect Base</title>
+  </head>
+
+  <body style="background-color: #f7f9fb">
+    <div>
+      <!--DROPDOWN-->
+      <div class="customdropdown status-dropdown received">
+        <div class="dropdown">Received</div>
+        <ul class="dropdown-list">
+          <li>Acknowledge</li>
+          <li>Reject</li>
+          <li>Held</li>
+        </ul>
+      </div>
+      <!--DROPDOWN ENDS-->
+      <!--DROPDOWN-->
+      <div class="customdropdown status-dropdown acknowledged">
+        <div class="dropdown">Acknowledged</div>
+        <ul class="dropdown-list">
+          <li>Advance to Progress</li>
+          <li>Held</li>
+        </ul>
+      </div>
+      <!--DROPDOWN ENDS-->
+      <!--DROPDOWN-->
+      <div class="customdropdown status-dropdown rejected">
+        <div class="dropdown">Rejected</div>
+        <ul class="dropdown-list">
+          <li>Advance to Progress</li>
+          <li>Held</li>
+        </ul>
+      </div>
+      <!--DROPDOWN ENDS-->
+      <!--DROPDOWN-->
+      <div class="customdropdown status-dropdown inprogress">
+        <div class="dropdown">In Progress</div>
+        <ul class="dropdown-list">
+          <li>Advance to Confirmed</li>
+          <li>Held</li>
+        </ul>
+      </div>
+      <!--DROPDOWN ENDS-->
+      <!--DROPDOWN-->
+      <div class="customdropdown status-dropdown confirmed">
+        <div class="dropdown">Confirmed</div>
+        <ul class="dropdown-list">
+          <li>Advance to Delivered</li>
+          <li>Held</li>
+        </ul>
+      </div>
+      <!--DROPDOWN ENDS-->
+      <!--DROPDOWN-->
+      <div class="customdropdown status-dropdown delivered">
+        <div class="dropdown">Delivered</div>
+      </div>
+      <!--DROPDOWN ENDS-->
+      <!--DROPDOWN-->
+      <div class="customdropdown status-dropdown completed">
+        <div class="dropdown">Completed</div>
+      </div>
+      <!--DROPDOWN ENDS-->
+    </div>
+    <div>
+      <!--DROPDOWN-->
+      <div class="customdropdown status-dropdown onhold">
+        <div class="dropdown">On Held</div>
+        <ul class="dropdown-list">
+          <li>Resume Order</li>
+          <li>Request Cancelation</li>
+        </ul>
+      </div>
+      <!--DROPDOWN ENDS-->
+      <!--DROPDOWN-->
+      <div class="customdropdown status-dropdown onheld">
+        <div class="dropdown">On Held</div>
+        <ul class="dropdown-list">
+          <li>Resume Order</li>
+          <li>Request Cancelation</li>
+        </ul>
+      </div>
+      <!--DROPDOWN ENDS-->
+      <!--DROPDOWN-->
+      <div class="customdropdown status-dropdown onhold">
+        <div class="dropdown">On Held</div>
+        <ul class="dropdown-list">
+          <li>Request Cancelation</li>
+        </ul>
+      </div>
+      <!--DROPDOWN ENDS-->
+      <!--DROPDOWN-->
+      <div class="customdropdown status-dropdown cancelation">
+        <div class="dropdown">Cancelation Requested</div>
+        <ul class="dropdown-list">
+          <li>Accept Cancelation</li>
+          <li>Reject Cancelation</li>
+        </ul>
+      </div>
+      <!--DROPDOWN ENDS-->
+      <!--DROPDOWN-->
+      <div class="customdropdown status-dropdown cancelation">
+        <div class="dropdown">Cancelation Requested</div>
+        <ul class="dropdown-list">
+          <li>Withdraw Cancelation</li>
+        </ul>
+      </div>
+      <!--DROPDOWN ENDS-->
+      <!--DROPDOWN-->
+      <div class="customdropdown status-dropdown cancelled">
+        <div class="dropdown">Cancelation Requested</div>
+      </div>
+      <!--DROPDOWN ENDS-->
+      <!--DROPDOWN-->
+      <div class="customdropdown status-dropdown cancelled">
+        <div class="dropdown">Canceled</div>
+      </div>
+      <!--DROPDOWN ENDS-->
+    </div>
+    <br />
+    <br />
+    <hr />
+    <div>
+      <!--DROPDOWN-->
+      <div class="customdropdown status-dropdown sent">
+        <div class="dropdown">Sent</div>
+        <ul class="dropdown-list">
+          <li>Withdraw Order</li>
+        </ul>
+      </div>
+      <!--DROPDOWN ENDS-->
+      <!--DROPDOWN-->
+      <div class="customdropdown status-dropdown acknowledged">
+        <div class="dropdown">Acknowledged</div>
+        <ul class="dropdown-list">
+          <li>Advance to Progress</li>
+          <li>Held</li>
+        </ul>
+      </div>
+      <!--DROPDOWN ENDS-->
+      <!--DROPDOWN-->
+      <div class="customdropdown status-dropdown rejected">
+        <div class="dropdown">Rejected</div>
+      </div>
+      <!--DROPDOWN ENDS-->
+      <!--DROPDOWN-->
+      <div class="customdropdown status-dropdown inprogress">
+        <div class="dropdown">In Progress</div>
+        <ul class="dropdown-list">
+          <li>Held</li>
+        </ul>
+      </div>
+      <!--DROPDOWN ENDS-->
+      <!--DROPDOWN-->
+      <div class="customdropdown status-dropdown confirmed">
+        <div class="dropdown">Confirmed</div>
+        <ul class="dropdown-list">
+          <li>Held</li>
+        </ul>
+      </div>
+      <!--DROPDOWN ENDS-->
+      <!--DROPDOWN-->
+      <div class="customdropdown status-dropdown delivered buyer">
+        <div class="dropdown">Delivered</div>
+        <ul class="dropdown-list">
+          <li>Accept Delivery</li>
+          <li>Reject Delivery</li>
+        </ul>
+      </div>
+      <!--DROPDOWN ENDS-->
+      <!--DROPDOWN-->
+      <div class="customdropdown status-dropdown completed">
+        <div class="dropdown">Completed</div>
+      </div>
+      <!--DROPDOWN ENDS-->
+      <!--DROPDOWN-->
+      <div class="customdropdown status-dropdown withdrawn">
+        <div class="dropdown">Withdraw</div>
+        <ul class="dropdown-list">
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <!--DROPDOWN ENDS-->
+    </div>
+  </body>
+</html>
