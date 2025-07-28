@@ -1,0 +1,64 @@
+<div class="progress-indicator mt8">
+  <div class="item">
+    <div class="percentage d-flex justify-content-start">0%</div>
+    <div class="bar {{ statuses[0] ? statuses[0] : '' }}"></div>
+    <div class="status-text">
+      <span class="status">Sent</span><span class="date">{{ date }}</span>
+    </div>
+  </div>
+  <div class="item">
+    <div class="percentage"></div>
+    <div class="bar {{ statuses[1] ? statuses[1] : '' }}"></div>
+    <div class="status-text">
+      <span class="status">Acknowledged</span
+      ><span class="date">{{ date }}</span>
+    </div>
+  </div>
+  <div class="item">
+    <div class="percentage d-flex justify-content-center flagtext">
+      <img src="./assets/icons/flag2.svg" alt="Flag" width="20" /><span>{{
+        date
+      }}</span>
+    </div>
+    <div class="bar {{ statuses[2] ? statuses[2] : '' }}"></div>
+    <div class="status-text">
+      <span class="status">In Progress</span
+      ><span class="date">{{ date }}</span>
+    </div>
+  </div>
+  <div class="item">
+    <div class="percentage"></div>
+    <div class="bar {{ statuses[3] ? statuses[3] : '' }}"></div>
+    <div class="status-text">
+      <span class="status">Confirmed</span><span class="date">{{ date }}</span>
+    </div>
+  </div>
+  <div class="item">
+    <div class="percentage"></div>
+    <div class="bar {{ statuses[4] ? statuses[4] : '' }}"></div>
+    <div class="status-text">
+      <span class="status">Delivered</span><span class="date">{{ date }}</span>
+    </div>
+  </div>
+  <div class="item">
+    <div class="percentage d-flex justify-content-end flaglate">
+      <label class="checkbox-box mr3"
+        >Flag as Late
+        <input type="checkbox" />
+        <span class="checkmark"></span> </label
+      >100%
+    </div>
+    <div class="bar {{ statuses[5] ? statuses[5] : '' }}"></div>
+    <div class="status-text text-right">
+      <span class="status">Completed</span><span class="date">{{ date }}</span>
+    </div>
+  </div>
+  <div
+    *ngIf="percentage != ''"
+    class="circular-indicator"
+    [style.left]="percentage"
+  >
+    <span class="perc-value">{{ percentage }}</span>
+    <span class="circle"></span>
+  </div>
+</div>

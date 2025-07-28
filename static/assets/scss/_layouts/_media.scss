@@ -1,0 +1,124 @@
+/****** Media Query ******/
+@media only screen and (min-width: 375px) and (max-width: 425px) {
+  nav.sidebar {
+    display: none !important;
+  }
+  .main-wrapper {
+    padding-left: 0;
+  }
+  .location-info {
+    width: 100%;
+    margin: auto;
+  }
+  .or-detail-head .actions {
+    margin-left: 0px;
+  }
+  .detail-info-title {
+    padding-left: 0px;
+  }
+  .row-item {
+    .column {
+      padding-left: 0px;
+      padding-right: 0px;
+      width: 90%;
+      box-sizing: border-box;
+    }
+  }
+  .row-item .column .info-card {
+    margin: 6px 0;
+  }
+  .progress-indicator .item .status-text .status {
+    line-height: 10px;
+    width: 40px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .progress-indicator .item .percentage {
+    span {
+      white-space: nowrap;
+    }
+  }
+  .flaglate .checkbox-box {
+    white-space: nowrap;
+  }
+  .roles-box {
+    flex-direction: column;
+    .left {
+      width: 100%;
+      border-right: none;
+    }
+  }
+  .serial-btns {
+    margin-top: 0px;
+    align-items: center;
+  }
+  // .tab-pane .row-item .column {
+  //   width: 100%;
+  // }
+  .modal-content-holder.customize {
+    width: 92%;
+    min-width: auto;
+  }
+}
+@media only screen and (min-width: 426px) and (max-width: 767px) {
+  nav.sidebar {
+    display: none !important;
+  }
+  .main-wrapper {
+    padding-left: 0;
+  }
+  .location-info {
+    width: 100%;
+    margin: auto;
+  }
+  .or-detail-head .actions {
+    margin-left: 0px;
+  }
+  .detail-info-title {
+    padding-left: 0px;
+  }
+  .row-item {
+    .column {
+      padding-left: 0px;
+      padding-right: 0px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+  .row-item .column .info-card {
+    margin: 6px 0;
+  }
+  .progress-indicator .item .status-text .status {
+    line-height: 10px;
+    width: 40px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .progress-indicator .item .percentage {
+    span {
+      white-space: nowrap;
+    }
+  }
+  .flaglate .checkbox-box {
+    white-space: nowrap;
+  }
+  .roles-box {
+    flex-direction: column;
+    .left {
+      width: 100%;
+      border-right: none;
+    }
+  }
+  .serial-btns {
+    margin-top: 0px;
+    align-items: center;
+  }
+  .tab-pane .row-item .column {
+    width: 100%;
+  }
+  .modal-content-holder.customize {
+    width: 92%;
+  }
+}

@@ -1,0 +1,130 @@
+@use "../_abstracts/colors";
+/*ADVANCED SEARCH */
+.advanced-search-modal {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+.overlay{
+  background-color: rgba(0,0,0,.55);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+.search-content{
+  
+  margin-left: auto;
+  margin-right: auto;
+  transition: all .2s ease-in;
+  .search-dropdown-menu{
+    position: absolute;
+    background-color: $white;
+    border: 1px solid #DEE8F1;
+    top: 38px;
+    width: 100%;
+    border-radius:0 0 4px 4px;
+    z-index: 1;
+    li{
+      a{
+        display: block;
+        padding: 8px 10px;
+        border-bottom: 1px solid #E8F0F8;
+        color: $gray-700;
+        text-decoration: none;
+        transition: all .2s ease-in;
+        &:hover{
+          background-color: $gray-300;
+        }
+      }
+      &:last-child{
+        a{
+          border: none;
+        }
+      }
+    }
+  }
+  .modal-header{
+    background-color: $primary-800;
+    padding: 17px 22px;
+    color: $white;
+    font-size: 14px;
+    font-family: 'Inter-Regular';
+    border-radius: 6px 6px 0 0;
+    position: relative;
+    .close-icon{
+      position: absolute;
+      right: 22px;
+    }
+  }
+  .modal-content{
+    background-color: $white;
+    min-height: 200px;
+    padding: 17px 22px;
+    form{
+      width: 100%;
+      display: flex;
+      align-items: stretch;
+      gap: .6rem;
+  }
+  }
+  .modal-footer{
+    background-color: $white;
+    padding: 17px 22px 22px 22px;
+    border-radius: 0 0 6px 6px;
+    .px5{
+      padding-left: 26px;
+      padding-right: 26px;
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .search-content{
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  position: absolute;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .search-content{
+    width: 60%;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  position: absolute;
+  }
+}
+@media only screen and (min-width: 768px) {
+}
+@media only screen and (min-width: 992px) {
+}
+@media only screen and (min-width: 1200px) {
+  .search-content{
+    width: 36.3%;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  position: absolute;
+  }
+  @media only screen and (min-width: 1200px) and (max-width: 1400px){
+    .search-content{
+      width: 36.3%;
+      top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  position: absolute;
+    }
+  }
+}
+/*ADVANCED SEARCH ENDS */

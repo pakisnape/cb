@@ -1,0 +1,54 @@
+@use '../_abstracts/colors';
+/* MAP POINTS */
+.map-point{
+    width: 36px;
+    height: 36px;
+    background: rgba(0,0,0,.2);
+    border-radius: 25px;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $white;
+    cursor: pointer;
+    &::after{
+        width: 16px;
+        height: 16px;
+        content: '';
+        display: block;
+        background: rgba(0,0,0,.8);
+        border-radius: 25px;
+    }
+}
+.map-point.pending{
+    background-color: $gold-800;
+    &::after{
+        background-color: $gold-900;
+    }
+}
+.map-point.sent{
+    background-color: $purple-800;
+    &::after{
+        background-color: $purple-900;
+    }
+}
+.map-point.rejected{
+    background-color: $orange-800;
+    &::after{
+        background-color: $orange-900;
+    }
+}
+.map-point.order{
+    background-color:$gray-700;
+    &::after{
+        background-color: $primary-800;
+    }
+}
+.map-point.closed{
+    background-color: $green-800;
+    &::after{
+        background-color: $green-900;
+    }
+}
+/* MAP POINTS ENDS */

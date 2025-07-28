@@ -1,0 +1,107 @@
+@use '../_abstracts/colors';
+
+/* BADGES */
+.badge {
+  color: $white;
+  display: inline-block;
+  border-radius: 24px;
+  padding: 4px 8px;
+  margin: 0px 2px;
+  font-family: "Inter-Regular";
+  font-weight: normal !important;
+}
+
+.badge.pending {
+  background-color: $gold-900;
+}
+
+.badge.sent {
+  background-color: $purple-900;
+}
+
+.badge.rejected {
+  background-color: $orange-900;
+}
+
+.badge.closed {
+  background-color: $green-900;
+}
+
+.badge.ordered {
+  background-color: #1476d3;
+}
+
+.badge.confirmed {
+  background-color: #763fac;
+}
+
+.badge.rejected {
+  background-color: #cb2500;
+}
+
+.badge.cancelation {
+  background-color: #ff773d;
+}
+
+.badge.cancelled {
+  background-color: #ff773d;
+}
+
+.badge.sent {
+  background-color: #849eb6;
+}
+
+.badge.delivered {
+  background-color: #32c741;
+}
+
+.badge.completed {
+  background-color: #2a8733;
+}
+
+.badge.onhold {
+  background-color: #ffc85a;
+}
+
+.badge.onheld {
+  background-color: #ffc85a;
+}
+
+.badge.withdrawn {
+  background-color: #ff3d9a;
+}
+
+.pre-order {
+  background-color: #ffffff;
+  color: #66757e;
+  border: 1px solid #ccd4d9;
+}
+
+.badge.inprogress {
+  background-color: #b367ff;
+}
+
+.badge.acknowledged {
+  background-color: #439df3;
+}
+
+.badge.archived {
+  background-color: #414141;
+  color: #ffffff;
+}
+
+.badge.received {
+  background-color: #a9a9a9;
+}
+
+.badge.cancelationrequested {
+  background-color: #ff773d;
+}
+.status.received {
+  background-color: rgba(132, 158, 182, 0.4);
+  &::after {
+    background-color: rgba(132, 158, 182, 1);
+  }
+}
+
+/* BADGES ENDS */

@@ -1,0 +1,128 @@
+@use "../_abstracts/colors";
+/* FILTER STARTS */
+.filter {
+  .search {
+    border-right: 1px solid $gray-500;
+    .formInputText {
+      margin-right: 32px;
+      padding: 9px 12px;
+    }
+  }
+  .filters {
+    .secondary-btn {
+      background-color: $gray-300;
+      color: $gray-800;
+      &:hover {
+        background-color: $gray-400;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+    .filter-box{
+        display: block;
+        margin: 15px 0 !important;
+        .filter {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom:0px;
+            .search{
+                border: none;
+                .formInputText{
+                    width: 100%;
+                    box-sizing: border-box;
+                    margin-right: 0px;
+                }
+            }
+        }
+        .filters{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+        }
+    }
+    
+}
+@media only screen and (min-width: 600px) {
+    .filter-box{
+        display: block;
+        margin: 15px 0 !important;
+        .filter {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 6px;
+            .search{
+                border: none;
+                .formInputText{
+                    width: 100%;
+                    box-sizing: border-box;
+                    margin-right: 0px;
+                }
+            }
+        }
+        .filters{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+        }
+    }
+}
+@media only screen and (min-width: 768px) {
+    .filter {
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+        .filters {
+            display: flex;
+            gap: 16px;
+          }
+      }
+}
+@media only screen and (min-width: 992px) {
+    .filter-box{
+        display: flex;
+        .filter {
+            display: flex;
+            flex-direction: row;
+            gap: 32px;
+            .filters {
+              display: flex;
+              gap: 16px;
+            }
+          }
+    }
+}
+@media screen and (min-width: 601px) and (max-width: 1500px) {
+  .secondary-filter{
+      flex-direction: column !important;
+  }
+  .sort-by{
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+    .filter-box{
+      .search{
+        border-right: 1px solid $gray-500 !important;
+        padding-right: 32px !important;
+        .formInputText {
+          padding: 5px 12px !important;
+        }
+      }
+        display: flex;
+        .filter {
+            display: flex;
+            flex-direction: row;
+            gap: 32px;
+            .filters {
+              display: flex;
+              gap: 16px;
+            }
+          }
+    }
+  
+}
+/* FILTER STARTS ENDS*/

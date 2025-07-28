@@ -1,0 +1,362 @@
+<table class="table {{ tableClass }}" id="{{ tableId }}">
+  <thead>
+    <tr>
+      <th colspan="14" class="colspaned">
+        <table class="nested-table">
+          <colgroup>
+            <col
+              class="{{ column.className }}"
+              *ngFor="let column of columns"
+            />
+          </colgroup>
+          <tr>
+            <th
+              *ngFor="let column of columns"
+              (click)="onSortColumn(column)"
+              class="{{ column.className }}"
+              [ngClass]="{
+                sort: column.sortable && sortable
+              }"
+            >
+              <ng-container *ngIf="column.type != 'action'">
+                {{ column.label }}
+                <img
+                  *ngIf="
+                    sort.column == column.key &&
+                    sort.direction == 1 &&
+                    column.sortable &&
+                    sortable
+                  "
+                  src="./assets/icons/arrowdown.svg"
+                  alt="asc"
+                />
+                <img
+                  *ngIf="
+                    sort.column == column.key &&
+                    sort.direction == -1 &&
+                    column.sortable &&
+                    sortable
+                  "
+                  src="./assets/icons/arrowup.svg"
+                  alt="desc"
+                />
+              </ng-container>
+              <ng-container *ngIf="column.type == 'action'">
+                <button
+                  class="settings-btn"
+                  *ngIf="column.label === '' && column.showGear"
+                >
+                  <img src="./assets/icons/nav-bar/settings.svg" />
+                </button>
+                <ng-container *ngIf="column.label !== ''">{{
+                  column.label
+                }}</ng-container>
+              </ng-container>
+            </th>
+          </tr>
+        </table>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="no-data-row" *ngIf="rows.length === 0 && !isLoading">
+      <td colspan="13">
+        <span class="text">No records available!</span>
+      </td>
+    </tr>
+    <ng-container *ngIf="rows.length > 0">
+      <tr
+        class="expandable"
+        *ngFor="let data of rows; let id = index"
+        (click)="onRowItemClick1(data)"
+      >
+        <td colspan="14" class="colspaned">
+          <table class="nested-table">
+            <colgroup>
+              <col
+                class="{{ column.className }}"
+                *ngFor="let column of columns"
+              />
+            </colgroup>
+            <tr>
+              <td
+                [attr.data-label]="column.label"
+                *ngFor="let column of columns"
+                class="{{ column.className }}"
+                [ngClass]="{
+                  'icon-td':
+                    column.type === 'img-text' || column.type === 'avatar',
+                  actions: column.type === 'action'
+                }"
+              >
+                <ng-container *ngIf="column.type == 'linked'">
+                  <a
+                    *ngIf="data[column.key].img"
+                    (click)="actionClicked({data, action: 'linked-click'});$event.stopPropagation()"
+                    class="link-icon"
+                    ><img src="{{ data[column.key].img }}" alt="Link"
+                  /></a>
+                </ng-container>
+                <ng-container *ngIf="column.type == 'normal'">
+                  {{ data[column.key].value }}
+                </ng-container>
+                <ng-container *ngIf="column.type == 'badge-with-date'">
+                  {{ data[column.key].value }}
+                  <div>
+                    <small class="text-small grey-text">{{
+                      data[column.key].badgeLabel
+                    }}</small>
+                  </div>
+                </ng-container>
+                <ng-container *ngIf="column.type == 'currency'">
+                  {{ data[column.key].value | currency: column.currencyType }}
+                </ng-container>
+                <ng-container *ngIf="column.type == 'status'">
+                  <span class="status {{ data[column.key].value }}"></span>
+                </ng-container>
+                <ng-container *ngIf="column.type == 'img-progress'">
+                  <div>
+                    <img
+                      *ngIf="data[column.key].img"
+                      [src]="data[column.key].img"
+                      alt="Flag"
+                    />
+                    {{ data[column.key].label }}
+                  </div>
+                  <div class="progress-bar-lined">
+                    <div
+                      class="progress-indication {{ data[column.key].status }}"
+                      [ngStyle]="{ width: data[column.key].value }"
+                    ></div>
+                  </div>
+                </ng-container>
+                <ng-container *ngIf="column.type == 'text-medium'">
+                  <span class="text-medium">{{ data[column.key].value }}</span>
+                </ng-container>
+                <ng-container *ngIf="column.type == 'img-text'">
+                  <div>
+                    <img
+                      src="{{ data[column.key].img }}"
+                      alt="{{ column.label }}"
+                    />
+                    {{ data[column.key].value }}
+                  </div>
+                </ng-container>
+                <ng-container *ngIf="column.type == 'avatar'">
+                  <div class="avatar {{ data[column.key].avatar }}">
+                    <span>{{ data[column.key].value }}</span>
+                  </div>
+                </ng-container>
+                <ng-container *ngIf="column.type == 'badge'">
+                  <label class="badge {{ data[column.key].value }}">{{
+                    data[column.key].label
+                  }}</label>
+                  <img
+                    (click)="actionClicked({data, action: 'badge-img-click'});$event.stopPropagation()"
+                    *ngIf="data[column.key].img"
+                    class="mt2"
+                    src="{{ data[column.key].img }}"
+                    alt="{{ column.label }}"
+                  />
+                </ng-container>
+                <ng-container *ngIf="column.type == 'badge-label'">
+                  <span class="badge mr2 {{ data[column.key].status }}"
+                    >&nbsp;{{ data[column.key].badgeLabel }}</span
+                  >{{ data[column.key].value }}
+                </ng-container>
+                <div class="list-action" *ngIf="column.type == 'action'">
+                  <ng-container *ngFor="let action of actions; let i = index">
+                    <button
+                      *ngIf="
+                        action.isButton && data[column.key][i] && action.img
+                      "
+                      (click)="actionClicked({data, action: action.value});$event.stopPropagation()"
+                      class="{{ action.className }}"
+                    >
+                      <img [src]="action.img" />
+                    </button>
+                    <div
+                      id="{{ id }}"
+                      class="customdropdown"
+                      *ngIf="action.isDropdown && data['actionDropdownItems']"
+                    >
+                      <a
+                        aria-haspopup="listbox"
+                        aria-labelledby="dropdown-label"
+                        (click)="toggleDropdown(id); $event.stopPropagation()"
+                        (clickOutside)="dropdownOpen = false"
+                      >
+                        <img [src]="action.img" />
+                      </a>
+                      <ul
+                        class="dropdown-list"
+                        role="listbox"
+                        aria-expanded="false"
+                        [ngClass]="{
+                          'dropdown-open': dropdownOpen && id == clickedRow
+                        }"
+                      >
+                        <li
+                          *ngFor="let o of data['actionDropdownItems']"
+                          tabindex="0"
+                          (click)="actionClicked({data, action: o.value});$event.stopPropagation()"
+                          role="option"
+                          [innerHTML]="o.key"
+                        ></li>
+                      </ul>
+                    </div>
+                    <button
+                      *ngIf="
+                        !action.img && data[column.key][i] && action.isButton
+                      "
+                      (click)="actionClicked({data, action: action.value});$event.stopPropagation()"
+                      class="{{ action.className }}"
+                    >
+                      {{ action.label }}
+                    </button>
+                  </ng-container>
+                </div>
+              </td>
+            </tr>
+            <tr class="expanded" *ngFor="let order of data.linkedOrders">
+              <td
+                [attr.data-label]="column.label"
+                *ngFor="let column of columns"
+                class="{{ column.className }}"
+                [ngClass]="{
+                  'icon-td':
+                    column.type === 'img-text' || column.type === 'avatar',
+                  actions: column.type === 'action',
+                  linked: column.type === 'linked'
+                }"
+              >
+                <ng-container *ngIf="column.type == 'linked'">
+                  <span class="h-line"></span>
+                </ng-container>
+                <ng-container *ngIf="column.type == 'normal'">
+                  {{ order[column.key].value }}
+                </ng-container>
+                <ng-container *ngIf="column.type == 'badge-with-date'">
+                  {{ order[column.key].value }}
+                  <div>
+                    <small class="text-small grey-text">{{
+                      order[column.key].badgeLabel
+                    }}</small>
+                  </div>
+                </ng-container>
+                <ng-container *ngIf="column.type == 'currency'">
+                  {{ order[column.key].value | currency: column.currencyType }}
+                </ng-container>
+                <ng-container *ngIf="column.type == 'status'">
+                  <!-- <span class="status {{ order[column.key].value }}"></span> -->
+                </ng-container>
+                <ng-container *ngIf="column.type == 'img-progress'">
+                  <div>
+                    <img
+                      *ngIf="order[column.key].img"
+                      [src]="order[column.key].img"
+                      alt="Flag"
+                    />
+                    {{ order[column.key].label }}
+                  </div>
+                  <div class="progress-bar-lined">
+                    <div
+                      class="progress-indication {{ order[column.key].status }}"
+                      [ngStyle]="{ width: order[column.key].value }"
+                    ></div>
+                  </div>
+                </ng-container>
+                <ng-container *ngIf="column.type == 'text-medium'">
+                  <span class="text-medium">{{ order[column.key].value }}</span>
+                </ng-container>
+                <ng-container *ngIf="column.type == 'img-text'">
+                  <div>
+                    <img
+                      src="{{ order[column.key].img }}"
+                      alt="{{ column.label }}"
+                    />
+                    {{ order[column.key].value }}
+                  </div>
+                </ng-container>
+                <ng-container *ngIf="column.type == 'avatar'">
+                  <div class="avatar {{ order[column.key].avatar }}">
+                    <span>{{ order[column.key].value }}</span>
+                  </div>
+                </ng-container>
+                <ng-container *ngIf="column.type == 'badge'">
+                  <label class="badge {{ order[column.key].value }}">{{
+                    order[column.key].label
+                  }}</label>
+                  <img
+                    (click)="actionClicked({order, action: 'badge-img-click'});$event.stopPropagation()"
+                    *ngIf="order[column.key].img"
+                    class="mt2"
+                    src="{{ order[column.key].img }}"
+                    alt="{{ column.label }}"
+                  />
+                </ng-container>
+                <ng-container *ngIf="column.type == 'badge-label'">
+                  <span class="badge mr2 {{ order[column.key].status }}"
+                    >&nbsp;{{ order[column.key].badgeLabel }}</span
+                  >{{ order[column.key].value }}
+                </ng-container>
+                <div class="list-action" *ngIf="column.type == 'action'">
+                  <ng-container *ngFor="let action of actions; let i = index">
+                    <button
+                      *ngIf="
+                        action.isButton && order[column.key][i] && action.img
+                      "
+                      (click)="actionClicked({order, action: action.value+'-linked'});$event.stopPropagation()"
+                      class="{{ action.className }}"
+                    >
+                      <img [src]="action.img" />
+                    </button>
+                    <div
+                      id="{{ id }}"
+                      class="customdropdown"
+                      *ngIf="action.isDropdown && order['actionDropdownItems']"
+                    >
+                      <a
+                        aria-haspopup="listbox"
+                        aria-labelledby="dropdown-label"
+                        (click)="toggleDropdown(id); $event.stopPropagation()"
+                        (clickOutside)="dropdownOpen = false"
+                      >
+                        <img [src]="action.img" />
+                      </a>
+                      <ul
+                        class="dropdown-list"
+                        role="listbox"
+                        aria-expanded="false"
+                        [ngClass]="{
+                          'dropdown-open': dropdownOpen && id == clickedRow
+                        }"
+                      >
+                        <li
+                          *ngFor="let o of order['actionDropdownItems']"
+                          tabindex="0"
+                          (click)="actionClicked({order, action: o.value+'-linked'});$event.stopPropagation()"
+                          role="option"
+                          [innerHTML]="o.key"
+                        ></li>
+                      </ul>
+                    </div>
+                    <button
+                      *ngIf="
+                        !action.img && order[column.key][i] && action.isButton
+                      "
+                      (click)="actionClicked({order, action: action.value+'-linked'});$event.stopPropagation()"
+                      class="{{ action.className }}"
+                    >
+                      {{ action.label }}
+                    </button>
+                  </ng-container>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </ng-container>
+  </tbody>
+</table>

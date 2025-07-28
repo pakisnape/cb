@@ -1,0 +1,82 @@
+/* SIMPLE ACCORDIAN */
+.simple-accordian{
+    .accordion-item{
+        .accordion-header{
+            padding: 8px 0;
+            display: flex;
+            cursor: pointer;
+            align-items: center;
+            justify-content: space-between;
+            button{
+                display: flex;
+                align-items: center;
+                background: none;
+                border: none;
+                color: #66757E;
+                font-family: 'Inter-SemiBold';
+                cursor: pointer;
+                img{
+                    transition: all .2s ease-in;
+                }
+            }
+            .extra-links{
+                display: flex;
+                a{
+                    display: inline-block;
+                    padding: 2px 6px 0 6px;
+                    color: #8FA4B0;
+                    font-family: 'Inter-SemiBold';
+                    text-decoration: none;
+                }
+                a.active{
+                    color: $primary-800;
+                }
+            }
+        }
+        
+    }
+    .accordion-item.active{
+        .accordion-header{
+            button{
+                img{
+                    transform: rotate(90deg);
+                }
+            }
+        }
+    }
+    .accordion-body{
+        padding: 8px;
+    }
+    .filter-container{
+        border: 1px solid #DEE8F1;
+        border-radius: 4px;
+        h6{
+            padding: 6px 22px;
+            font-size: 11px;
+            color: #8FA4B0;
+            font-family: 'Inter-SemiBold';
+        }
+        .filter-scroll{
+            height: 140px;
+            overflow-y: scroll;
+            ul{
+                margin-left: 22px;
+                li{
+                    padding: 5px 0;
+                    .checkbox-box{
+                        padding-left: 28px;
+                        color: $gray-800;
+                        font-family: 'Inter-SemiBold';
+                    }
+                }
+            }
+        }
+    }
+    .accordion-collapse{
+        display: none;
+    }
+    .accordion-collapse.show{
+        display: block;
+    }
+}
+/* SIMPLE ACCORDIAN ENDS*/

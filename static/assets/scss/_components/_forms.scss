@@ -1,0 +1,130 @@
+@use "../_abstracts/colors";
+/* FORMS */
+/* Check box */
+.checkbox-box {
+  display: inline-block;
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 0px;
+  cursor: pointer;
+  font-size: 12px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkbox-box input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox-box .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 17px;
+  width: 17px;
+  background-color: $white;
+  border: 2px solid $gray-500;
+  border-radius: 4px;
+  transition: all 0.2s ease-in;
+}
+
+.checkbox-box:hover input ~ .checkmark {
+  background-color: $white;
+}
+
+.checkbox-box input:checked ~ .checkmark {
+  background-color: $white;
+  border: 2px solid $primary-700;
+}
+
+.checkbox-box .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-box input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-box .checkmark:after {
+  left: 4px;
+  top: 1px;
+  width: 4px;
+  height: 7px;
+  border: solid $primary-700;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/* Check box Ends */
+/* Radio Button */
+.radio-box {
+  display: block;
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.radio-box input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.radio-box .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 17px;
+  width: 17px;
+  background-color: $white;
+  border: 2px solid $gray-500;
+  border-radius: 50%;
+  transition: all 0.2s ease-in;
+}
+
+.radio-box:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.radio-box input:checked ~ .checkmark {
+    background-color: $white;
+    border: 2px solid $primary-700;
+}
+
+.radio-box .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radio-box input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.radio-box .checkmark:after {
+  top: 3px;
+  left: 3px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: $primary-700;
+}
+/* Radio Button Ends*/
+/* FORMS ENDS */

@@ -1,0 +1,325 @@
+/* GRID LAYOUTS */
+.grid_type_one {
+  display: grid;
+  grid-gap: 20px;
+
+  .gray-item {
+    background-color: $gray-300;
+    padding: 15px 18px;
+    border-radius: 6px;
+    position: relative;
+  }
+}
+
+.grid-two-column {
+  display: grid;
+  grid-gap: 20px;
+}
+
+.grid-four-column {
+  display: grid;
+  grid-gap: 20px;
+
+  .item {
+    min-height: 400px;
+  }
+}
+
+@media only screen and (max-width: 50px) {
+  .grid-four-column {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (min-width: 501px) and (max-width: 620px) {
+  .grid-four-column {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (min-width: 621px) and (max-width: 768px) {
+  .grid-four-column {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 922px) {
+  .grid-four-column {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 923px) and (max-width: 1200px) {
+  .grid-four-column {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (min-width: 600px) {}
+
+@media only screen and (min-width: 768px) {
+  .grid_type_one {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .locations_price {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+
+  .locations_speed {
+    grid-area: 1 / 3 / 2 / 5;
+  }
+
+  .locations_competition {
+    grid-area: 2 / 1 / 3 / 3;
+  }
+
+  .top_competitors {
+    grid-area: 2 / 3 / 3 / 5;
+  }
+
+  .locations_region {
+    grid-area: 3 / 1 / 4 / 5;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .grid_type_one {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .locations_price {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+
+  .locations_speed {
+    grid-area: 1 / 3 / 2 / 5;
+  }
+
+  .locations_competition {
+    grid-area: 2 / 1 / 3 / 3;
+  }
+
+  .top_competitors {
+    grid-area: 2 / 3 / 3 / 5;
+  }
+
+  .locations_region {
+    grid-area: 3 / 1 / 4 / 5;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .grid_type_one {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .locations_price {
+    grid-area: 1 / 1 / 2 / 4;
+  }
+
+  .locations_speed {
+    grid-area: 1 / 4 / 2 / 7;
+  }
+
+  .locations_competition {
+    grid-area: 2 / 1 / 3 / 3;
+  }
+
+  .top_competitors {
+    grid-area: 2 / 3 / 3 / 5;
+  }
+
+  .locations_region {
+    grid-area: 2 / 5 / 3 / 7;
+  }
+
+  .grid-two-column {
+    grid-template-columns: 2fr 0.75fr;
+  }
+
+  .grid-four-column {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.seller-home-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 35px;
+
+  .filter-ar {
+    grid-area: 1 / 3 / 2 / 1;
+  }
+
+  .orders_account {
+    grid-area: 2 / 1 / 2 / 1;
+  }
+
+  .orders_product {
+    grid-area: 2 / 2 / 2 / 3;
+  }
+
+  .tasks {
+    grid-area: 1 / 3 / 4 / 4;
+  }
+
+  .orders_customer {
+    grid-area: 3 / 1 / 3 / 1;
+  }
+
+  .orders_stage {
+    grid-area: 3 / 2 / 3 / 3;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 968px) {
+  .seller-home-grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 0;
+
+    .filter-ar {
+      grid-area: 1 / 3 / 2 / 1;
+    }
+
+    .orders_account {
+      grid-area: 2 / 1 / 2 / 2 !important;
+    }
+
+    .orders_product {
+      grid-area: 3 / 1 / 3 / 2 !important;
+    }
+
+    .tasks {
+      grid-area: 6 / 1 / 6 / 2;
+    }
+
+    .orders_customer {
+      grid-area: 4 / 1 / 4 / 2;
+    }
+
+    .orders_stage {
+      grid-area: 5 / 1 / 5 / 2;
+    }
+  }
+
+}
+
+.grid-item {
+  background-color: #F7F9FB;
+  border-radius: 12px;
+  padding: 20px;
+  padding-bottom: 50px;
+  position: relative;
+
+  .grid-item-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h4.grid-title {
+      font-size: 14px;
+      font-family: 'Inter-SemiBold';
+      color: #2C4F63;
+    }
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  .buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 14px;
+    position: absolute;
+    bottom: 0px;
+    width: 98%;
+    box-sizing: border-box;
+    padding: 20px 40px;
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        img {
+          filter: invert(18%) sepia(96%) saturate(4881%) hue-rotate(200deg) brightness(89%) contrast(101%);
+        }
+
+        svg {
+          path {
+            fill: $primary-800;
+          }
+        }
+      }
+    }
+
+    button.active {
+      img {
+        filter: invert(18%) sepia(96%) saturate(4881%) hue-rotate(200deg) brightness(89%) contrast(101%);
+      }
+    }
+  }
+}
+
+.chart-area {
+  display: flex;
+  justify-content: center;
+}
+
+.tasks .task-list {
+  margin: 20px 0;
+
+  li {
+    margin: 10px 0;
+
+    a {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      text-decoration: none;
+      gap: 10px;
+
+      span {
+        color: #2C4F63;
+        text-decoration: none;
+        font-size: 14px;
+      }
+
+      img {
+        transition: all .2s ease-in;
+      }
+    }
+
+  }
+
+  li.expanded {
+    a {
+      img {
+        transform: rotate(90deg);
+      }
+    }
+
+    ul {
+      padding: 8px 34px;
+
+      li {
+        a {
+          color: #2C4F63;
+          text-decoration: none;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+/* GRID LAYOUTS ENDS */

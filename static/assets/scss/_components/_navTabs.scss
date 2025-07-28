@@ -1,0 +1,82 @@
+/* NAV TABS */
+.nav-tabs {
+    display: flex;
+    border-bottom: 1px solid #E5EAED;
+    li.nav-item {
+        .nav-link {
+            display: inline-block;
+            border-bottom: 1px solid $white;
+            text-decoration: none;
+            color: #081F2C;
+            font-family: 'Inter-SemiBold';
+            padding: 6px 14px;
+            transition: all .2s ease-in;
+            text-align: center;
+
+            &:hover {
+                color: $gray-900;
+            }
+
+        }
+
+        .nav-link.active {
+            border-bottom: 1px solid $primary-800;
+            color: $primary-800;
+        }
+    }
+
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .nav-tabs {
+        overflow-x: scroll;
+    }
+}
+
+.search-content {
+    .search {
+        display: flex;
+        align-items: stretch;
+        gap: .6rem;
+        padding: 20px 0 0 0;
+        position: relative;
+
+        .search-box {
+            flex-grow: 9;
+            display: flex;
+            align-items: stretch;
+            position: relative;
+
+            .searchMenu {
+                position: absolute;
+                background: $white;
+                border: none;
+                right: 2px;
+                top: 2px;
+                width: 38px;
+                height: 36px;
+                border-radius: 2px;
+                transition: all .2s ease-in;
+                cursor: pointer;
+
+                &:hover {
+                    background: $gray-300;
+
+                    svg {
+                        path {
+                            fill: $primary-800;
+                        }
+                    }
+                }
+            }
+        }
+
+        .formInputText {
+            width: 100%;
+            padding-right: 30px;
+        }
+
+    }
+}
+
+/* NAV TABS ENDS*/

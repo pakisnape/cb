@@ -1,0 +1,79 @@
+@use '../_abstracts/colors';
+/* AVATAR */
+.avatar{
+    display: flex;
+    width: 28px;
+    height: 28px;
+    border-radius: 35px;
+    color: $white;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 2px 2px;
+    span{
+        font-size: 11px;
+        text-transform: uppercase;
+    }
+}
+.avatar.gold{
+    background-color: $gold-900;
+}
+.avatar.purple{
+    background-color: $purple-900;
+}
+.avatar.orange{
+    background-color: $orange-900;
+}
+.avatar.blue{
+    background-color: $primary-800;
+}
+
+.avatar.sent{
+    background-color: $purple-900;
+  }
+  .avatar.rejected{
+    background-color: $orange-900;
+  }
+  .avatar.closed{
+    background-color: $green-900;
+  }
+  .avatar.ordered{
+    background-color: #1476D3;
+  }
+  .avatar.confirmed{
+    background-color: #D0A1FF;
+  }
+  .avatar.rejected{
+    background-color: #CB2500;
+  }
+  .avatar.cancelationrequested{
+    background-color: #FF773D;
+  }
+  .avatar.cancelled{
+    background-color: #FF773D;
+  }
+  .avatar.sent{
+    background-color: #B1BCC6;
+  }
+  .avatar.delivered{
+    background-color: #32C741;
+  }
+  .avatar.completed{
+    background-color: #99F3A2;
+  }
+  .avatar.onhold{
+    background-color: #FFC85A;
+  }
+  .avatar.pre-order{
+    background-color: #FFFFFF;
+    }
+  .avatar.inprogress{
+    background-color: #B367FF;
+  }
+  .avatar.acknowledged{
+    background-color: #439DF3;
+  }
+  .avatar.received{
+    background-color: #FFFFFF;
+    }
+/* AVATAR ENDS*/

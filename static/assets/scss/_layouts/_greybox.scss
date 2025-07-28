@@ -1,0 +1,253 @@
+@use "../_abstracts/colors";
+/* GREY BOX */
+.grey-box {
+  background: $gray-600;
+  border-radius: 12px;
+  height: 100%;
+  .top {
+    background: $gray-800;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    padding: 14px 20px;
+    
+    .title {
+      font-size: 14px;
+      line-height: 17px;
+      color: $white;
+    }
+    .link {
+      font-size: 14px;
+      color: $white;
+      cursor: pointer;
+      a.detaillink {
+        margin-right: 12px;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .bottom {
+  //  background: $gray-600;
+    height: 100%;
+    .details {
+      padding: 20px 20px 0 20px;
+      .amount {
+        font-size: 20px;
+        color: #36444b;
+        font-family: 'Inter-Medium';
+        margin-bottom: 20px;
+      }
+      .type {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0px;
+        gap: 14px;
+        font-size: 12px;
+        color: #36444b;
+        font-family: 'Inter-Medium';
+        margin-bottom: 10px;
+        span{
+            font-family: 'Inter-Medium';
+        }
+      }
+      .highlight {
+        display: inline-block;
+        padding: 0px;
+        gap: 8px;
+        background-color: #cfdde9;
+        border-radius: 8px;
+        padding: 8px;
+        margin: 10px 0px;
+        label{
+            display: block;
+            font-size: 11px;
+            color: #758FAA;
+            font-family: 'Inter-SemiBold';
+        }
+        span{
+            color: #2C4F63;
+            font-size: 12px;
+            font-family: 'Inter-Medium';
+        }
+      }
+    }
+    hr {
+        border: 0;
+        border-top: 1px solid #cdd6df;
+        -webkit-box-sizing: content-box;
+                box-sizing: content-box;
+        height: 0;
+      }
+      .activity-box{
+        padding: 10px 20px 20px 20px;
+        h6{
+            color: #2C4F63;
+            font-size: 12px;
+            font-family: 'Inter-Medium';
+        }
+        .activity-table{
+            width: 100%;
+            margin-top: 16px;
+            max-height: 360px;
+            overflow-y: scroll;
+            ::-webkit-scrollbar-track {
+              background: #DEE8F1;
+              transition: all .2s ease-in;
+            }
+            tbody{
+              max-height: 250px;
+              display: block;
+              overflow-y: scroll;
+            }
+            tr{
+                td{
+                    font-size: 12px;
+                    color: #36444B;
+                    padding: 4px 0px;
+                    &:first-child{
+                        font-family: 'Inter-SemiBold';
+                        font-size: 11px;
+                        color: #36444B;
+                        width: 110px;
+                    }
+                    a{
+                        color: $primary-800;
+                        text-decoration: none;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                
+            }
+        }
+        
+      }
+      .tabs{
+        ul{
+            display: flex;
+            background: #707F88;
+            li{
+                a{
+                    padding: 8px 30px;
+                    display: inline-block;
+                    text-decoration: none;
+                    color: #B7BFC3;
+                    transition: all .2s ease-in;
+                    font-family: 'Inter-Medium';
+                    &:hover{
+                        color: $white;
+                    }
+                }
+            }
+            li.active{
+                a{
+                    color: $white;
+                    font-size: 13px;
+                    
+                }
+            }
+        }
+    }
+    .provide{
+        min-height: 100px;
+    }
+    .highlite-blue{
+        color: $primary-800;
+        font-size: 12px;
+        padding: 0 20px;
+    }
+    .locations-box{
+        padding: 20px;
+        .locations{
+            font-size: 16px;
+            font-family: 'Inter-Medium';
+            color: #36444B;
+        }
+        .amount{
+            display: flex;
+            .info{
+                margin: 20px 40px 20px 0px;
+                span{
+                    font-size: 20px;
+                    font-family: 'Inter-Medium';
+                    color: #36444B;
+                    display: block;
+                    margin-bottom: 8px;
+                }
+                label{
+                    font-size: 20px;
+                    font-family: 'Inter-SemiBold';
+                    color: #758FAA;
+                    display: block;
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+  }
+}
+.quote-box{
+  .compatators{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0 0 0;
+    a{
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      color: $white;
+      cursor: pointer;
+      &:hover{
+        text-decoration: underline;
+      }
+      span{
+        margin-right: 12px;
+      }
+    }
+  }
+  .location-link-detail{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 0px 15px 0;
+    span{
+      font-family: 'Inter-Medium';
+    }
+    a{
+      color: $primary-800;
+      text-decoration: none;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+  .quote-list-box{
+    padding: 20px 20px;
+    .quote-box-table{
+      width: 100%;
+      
+      tr{
+        td{
+          padding: 6px 0px;
+          &:first-child{
+            color: #36444B;
+            font-size: 12px;
+            font-family: 'Inter-Regular';
+          }
+          &:last-child{
+            color: #36444B;
+            font-size: 12px;
+            font-family: 'Inter-Medium';
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+  
+}
+/* GREY BOX ENDS */

@@ -1,0 +1,33 @@
+/* CAROUSEL */
+.carouselIndicators{
+    display: flex;
+    justify-content: space-between !important;
+    align-items: center;
+    border-top: 1px solid #E3E9F0;
+    padding-top: 12px!important;
+    .bullets{
+        display: flex;
+        gap: 6px;
+        
+        li{
+            a{
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                border-radius: 15px;
+                background-color: #CFDDE9;
+                transition: all .2s ease-in;
+                cursor: pointer;
+                &:hover{
+                    background-color: $gray-700;
+                }
+            }
+        }
+        li.active{
+            a{
+                background-color: $primary-800;
+            }
+        }
+    }
+}
+/* CAROUSEL ENDS */

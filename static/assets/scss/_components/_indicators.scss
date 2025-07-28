@@ -1,0 +1,162 @@
+@use '../_abstracts/colors';
+
+/* STATUS INDICATORS */
+.status{
+    width: 14px;
+    height: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 14px;
+    margin: 5px;
+    &::after{
+        display: block;
+        content: '';
+        width: 4px;
+        height: 4px;
+        border-radius: 4px;
+    }
+}
+.status.pending{
+    background-color: $gold-800;
+    &::after{
+        background-color: $gold-900;
+    }
+}
+.status.order{
+    background-color: $gray-600;
+    &::after{
+        background-color: $primary-800;
+    }
+}
+.status.sent{
+    background-color: $purple-800;
+    &::after{
+        background-color: $purple-900;
+    }
+}
+.status.rejected{
+    background-color: $orange-800;
+    &::after{
+        background-color: $orange-900;
+    }
+}
+.status.closed{
+    background-color: $green-800;
+    &::after{
+        background-color: $green-900;
+    }
+}
+
+
+.status.sent{
+    background-color: rgba(132,158,182,.4);
+    &::after{
+        background-color: rgba(132,158,182,1);
+    }
+}
+.status.received{
+    background-color: rgba(132,158,182,.4);
+    &::after{
+        background-color: rgba(132,158,182,1);
+    }
+}
+.status.pre-order{
+    background-color: rgba(255,255,255,1);
+    &::after{
+        background-color: rgba(255,255,255,1);
+    }
+}
+.status.ordered{
+    background-color: rgba(20,118,211,.4);
+    &::after{
+        background-color: rgba(20,118,211,1);
+    }
+}
+.status.acknowledged{
+    background-color: rgba(67,157,243,.4);
+    &::after{
+        background-color: rgba(67,157,243,1);
+    }
+}
+.status.inprogress{
+    background-color: rgba(179, 103, 255, .4);
+    &::after{
+        background-color:rgba(179, 103, 255, 1)
+    }
+}
+.status.confirmed{
+    background: rgba(118, 63, 172, .4);
+    &::after{
+        background: rgba(118, 63, 172, 1);
+
+    }
+}
+.status.withdrawn{
+    background: rgba(255, 61, 154, .4);
+    &::after{
+        background: rgba(255, 61, 154, 1);
+
+    }
+}
+.status.delivered{
+    background: rgba(50, 199, 65, .4);
+    &::after{
+        background: rgba(50, 199, 65, 1);
+
+    }
+}
+.status.completed{
+    background: rgba(42, 135, 51, .4);
+    &::after{
+        background: rgba(42, 135, 51, 1);
+    }
+}
+.status.onhold{
+    background: rgba(255, 200, 90, .4);
+    &::after{
+        background: rgba(255, 200, 90, 1);
+    }
+}
+.status.onheld{
+    background: rgba(255, 200, 90, .4);
+    &::after{
+        background: rgba(255, 200, 90, 1);
+    }
+}
+.status.rejected{
+    background: rgba(203, 37, 0, .4);
+    &::after{
+        background: rgba(203, 37, 0, 1);
+
+    }
+}
+.status.cancelation{
+    background: rgba(255, 119, 61, .4);
+    &::after{
+        background: rgba(255, 119, 61, 1);
+    }
+}
+.status.cancelled{
+    background: rgba(255, 119, 61, .4);
+    &::after{
+        background: rgba(255, 119, 61, 1);
+    }
+}
+.status.cancelationrequested{
+    background: rgba(255, 119, 61, .4);
+    &::after{
+        background: rgba(255, 119, 61, 1);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* STATUS INDICATORS ENDS */

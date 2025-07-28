@@ -1,0 +1,18 @@
+<button
+  *ngIf="btnLink != ''"
+  class="{{ className }} {{ size }}"
+  [attr.disabled]="disabled ? 'disabled' : null"
+  [routerLink]="btnLink"
+>
+  <ng-container *ngIf="!icon">{{ label }}</ng-container>
+  <ng-container *ngIf="icon"><img src="{{ img }}" alt="button" /></ng-container>
+</button>
+
+<button
+  *ngIf="btnLink == ''"
+  class="{{ className }} {{ size }}"
+  [attr.disabled]="disabled ? 'disabled' : null"
+>
+  <ng-container *ngIf="!icon">{{ label }}</ng-container>
+  <ng-container *ngIf="icon"><img src="{{ img }}" alt="button" /></ng-container>
+</button>

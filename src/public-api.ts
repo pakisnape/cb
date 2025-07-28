@@ -1,0 +1,25 @@
+/*
+ * Public API Surface of pattern-lib
+ */
+
+export * from './lib/pattern-lib.service';
+export * from './lib/pattern-lib.component';
+export * from './lib/pattern-lib.module';
+
+export * from './lib/avatar/avatar.component';
+export * from './lib/badge/badge.component';
+export * from './lib/button/button.component';
+export * from './lib/datatable/datatable.component';
+export * from './lib/deals-card/deals-card.component';
+export * from './lib/dropdown/dropdown.component';
+export * from './lib/dropdown-expanded/dropdown-expanded.component';
+export * from './lib/form/form.component';
+export * from './lib/search-input/search-input.component';
+export * from './lib/sidebar/sidebar.component';
+export * from './lib/status-indicator/status-indicator.component';
+export * from './lib/strip/strip.component';
+export * from './lib/table/table.component';
+export * from './lib/progress-bar/progress-bar.component';
+export * from './lib/dropdown-status/dropdown-status.component';
+
+export * from './lib/directives/click-outside.directive';

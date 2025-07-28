@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,oBAAoB;AACpB,AAAA,sBAAsB,CAAC;EACrB,QAAQ,EAAE,KAAK;EACf,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;EACX,GAAG,EAAE,CAAC;EACN,IAAI,EAAE,CAAC;CACR;;AACD,yBAAyB",
+    "sources": [
+        "../scss/_layouts/advancedSrearch.scss"
+    ],
+    "names": [],
+    "file": "advancedSrearch.css"
+}

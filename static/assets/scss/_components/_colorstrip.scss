@@ -1,0 +1,44 @@
+.strip {
+  background: linear-gradient(
+    270deg,
+    #ff773d 0%,
+    #b367ff 6.82%,
+    #005eb8 14.59%,
+    #f9ad16 23.13%,
+    #ff773d 32.02%,
+    #b367ff 41.52%,
+    #005eb8 50.24%,
+    #f9ad16 59.04%,
+    #ff773d 68.71%,
+    #b367ff 78.2%,
+    #005eb8 88.73%,
+    #f9ad16 100%
+  );
+  background-position: 0 100%;
+  background-size: 200% auto;
+  height: 8px;
+  width: 100%;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  top: 0;
+}
+.strip.loading {
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-name: gradient;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.forbidden {
+  margin: 100px 0;
+}

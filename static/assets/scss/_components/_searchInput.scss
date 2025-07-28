@@ -1,0 +1,44 @@
+@use '../_abstracts/colors';
+
+/* SEARCH INPUT */
+.formInputText {
+    background-color: $white;
+    border-radius: 4px;
+    border: 1px solid $gray-600;
+    font-family: 'Inter-Regular';
+    transition: all .2s ease-in;
+
+    &:focus {
+        outline: none;
+        border: 1px solid $primary-700;
+        color: $primary-900;
+    }
+
+    &::placeholder {
+        color: $gray-700;
+    }
+
+    &:disabled {
+        background-color: $gray-600;
+        color: $gray-700;
+    }
+
+    &:read-only {
+        background-color: $gray-600;
+        color: $gray-700;
+    }
+}
+
+.formInputText.large {
+    padding: 10px 16px;
+    font-size: 13px;
+}
+
+.formInputText.small {
+    padding: 6px 12px;
+    font-size: 12px;
+}
+
+.formInputText.rounded {
+    border-radius: 24px !important;
+}
