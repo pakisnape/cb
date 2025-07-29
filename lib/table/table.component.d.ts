@@ -1,0 +1,36 @@
+import { EventEmitter, OnInit, ElementRef } from '@angular/core';
+import { Sort } from '../../models/sort';
+import { TableAction } from '../../models/table-action';
+import { TableColumn } from '../../models/table-column';
+import * as i0 from "@angular/core";
+export declare class TableComponent implements OnInit {
+    private elem;
+    sort: Sort;
+    selectedRow: any;
+    isLoading: boolean;
+    customSortable: boolean;
+    sortable: boolean;
+    columns: TableColumn[];
+    rows: any[];
+    actionDropdownItems: any[];
+    tableClass: string;
+    tableId: string;
+    actions: TableAction[];
+    customSort: EventEmitter<any>;
+    rowClick: EventEmitter<any>;
+    dropdownOpen: boolean;
+    currentValueChange: EventEmitter<any>;
+    actionClick: EventEmitter<any>;
+    clickedRow: number;
+    get dropdownElement(): Element;
+    constructor(elem: ElementRef);
+    ngOnInit(): void;
+    onRowItemClick1(data: any): void;
+    actionClicked(data: any): void;
+    closeDropdown(): void;
+    select(value: any): void;
+    toggleDropdown(id: any): void;
+    onSortColumn(column: TableColumn): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TableComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableComponent, "cb-table", never, { "sort": "sort"; "isLoading": "isLoading"; "customSortable": "customSortable"; "sortable": "sortable"; "columns": "columns"; "rows": "rows"; "actionDropdownItems": "actionDropdownItems"; "tableClass": "tableClass"; "tableId": "tableId"; "actions": "actions"; }, { "customSort": "customSort"; "rowClick": "rowClick"; "currentValueChange": "currentValueChange"; "actionClick": "actionClick"; }, never, never, false, never>;
+}
